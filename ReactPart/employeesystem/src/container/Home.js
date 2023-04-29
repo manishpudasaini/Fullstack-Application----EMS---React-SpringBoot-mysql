@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import "./Home.css"
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import "./Home.css"
 
 export default function Home() {
     const[employee, setEmployee] = useState([])
+
+    
 
 
     useEffect(()=>{
@@ -26,11 +29,11 @@ export default function Home() {
     
   return (
     <div className="homepage">
-
-    <h1>Employee Management System - Employee List</h1>
+    <Header title="Employee List"/>
+    
 
     <Link to='/addemp'>
-        <button>Add employee</button>
+        <button id='add'>Add employee</button>
     </Link>
     
 
@@ -68,7 +71,8 @@ export default function Home() {
 
     </table>
 
-
+    
     </div>
+    
   )
 }

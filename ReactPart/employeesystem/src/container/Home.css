@@ -1,0 +1,12 @@
+#add{
+    margin-left: 70px;
+    margin-top: 30px;
+    color: black;
+    padding: 10px;
+    background-color: burlywood;
+    border-radius: 7px;
+}
+#add:hover{
+    cursor: pointer;
+
+}

@@ -1,0 +1,14 @@
+#header{
+        background-color: aqua;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+h1{
+    color: blue;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+
