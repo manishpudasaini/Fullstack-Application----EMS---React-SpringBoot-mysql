@@ -15,15 +15,24 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
+    //add employee in the database
     @PostMapping("/add")
     public String addEmployee(@RequestBody Employee employee){
         employeeService.addEmployee(employee);
         return "Employee added successfully in database";
     }
 
+    // get list of employee
     @GetMapping("/get")
     public List<Employee> getEmployee(){
         List<Employee> employeeList = employeeService.getEmployee();
         return employeeList;
+    }
+
+    //delete employee
+    @GetMapping("/delete/{id}")
+    public String deleteEmployee(@PathVariable int id){
+        employeeService.deleteEmployee(id);
+        return "employee deleted successfully!!!";
     }
 }

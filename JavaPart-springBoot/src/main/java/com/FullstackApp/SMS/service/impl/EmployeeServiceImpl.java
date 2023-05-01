@@ -27,4 +27,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         List<Employee> employeeList = employeeRepository.findAll();
         return employeeList;
     }
+
+    @Override
+    public void deleteEmployee(int id) {
+        employeeRepository.deleteById(id);
+    }
 }

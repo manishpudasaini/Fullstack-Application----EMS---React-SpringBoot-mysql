@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Header from './Header';
+import DeleteButton from './DeleteButton';
 import "./Home.css"
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
 
 
     useEffect(()=>{
-        fetch('http://localhost:8181/employee/get').then(function(response){
+        fetch('http://localhost:8080/employee/get').then(function(response){
         response.json().then(function(data) {
 
         console.log(data);
@@ -25,10 +26,15 @@ export default function Home() {
         })
     },[])
 
+ 
+  
+
 
     
   return (
     <div className="homepage">
+
+      {/* header component   */}
     <Header title="Employee List"/>
     
 
@@ -46,6 +52,7 @@ export default function Home() {
             <th scope="col">Employee Phone</th>
             <th scope="col">Gender</th>
             <th scope="col">Skill</th>
+            <th scope="col">Action</th>
         </tr>
         </thead>
 
@@ -62,6 +69,7 @@ export default function Home() {
                             <td>{phone}</td>
                             <td>{gender}</td>
                             <td>{skill}</td>
+                            <td><DeleteButton id={id}/></td>
                         </tr>)
                     
 

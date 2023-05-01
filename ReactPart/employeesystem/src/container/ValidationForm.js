@@ -16,7 +16,7 @@ export default function ValidationForm() {
             console.log(employee);
 
             //now the important part is to send the data in database when submit button is clicked
-            fetch("http://localhost:8181/employee/add", {
+            fetch("http://localhost:8080/employee/add", {
                     method:"POST",
                     headers:{"Content-Type":"application/json"},
                     body:JSON.stringify(employee)
@@ -27,6 +27,11 @@ export default function ValidationForm() {
 
     }
 
+    function refreshPage(){
+      setTimeout(()=>{
+          window.location.reload();
+      },1000);
+    }
   return (
   <>
    
@@ -81,7 +86,7 @@ export default function ValidationForm() {
   </div>
   
   <div class="form-group">
-        <Link to='/'>
+        <Link to='/' onClick={refreshPage}>
                     <button type='submit' onClick={handelClick}>Submit</button>
         </Link>
 
