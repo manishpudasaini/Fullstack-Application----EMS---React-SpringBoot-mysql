@@ -36,7 +36,6 @@ export default function ValidationForm() {
   <>
    
    <div>
-
    <form>
   <h2>Registration Form</h2>
   
@@ -75,13 +74,14 @@ export default function ValidationForm() {
 
   
   <div class="form-group">
-    <label for="skill">Skill:</label>
+    <label for="skill">Role:</label>
     <select id="Skill" value={skill} onChange={(e)=> setSkill(e.target.value)}>
       <option value=""disabled>---Select---</option>
-      <option>Java</option>
-      <option>Python</option>
-      <option>JavaScript</option>
-      <option>Node Js</option>
+      <option>Java Developer</option>
+      <option>Python Developer</option>
+      <option>CEO</option>
+      <option>Frontend Developer</option>
+      <option>Bussiness Analyst</option>
     </select>
   </div>
   

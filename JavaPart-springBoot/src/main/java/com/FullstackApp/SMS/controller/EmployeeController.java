@@ -35,4 +35,13 @@ public class EmployeeController {
         employeeService.deleteEmployee(id);
         return "employee deleted successfully!!!";
     }
+
+    @PutMapping ("/update/{id}")
+    public Employee updateEmployee(@PathVariable int id,@RequestBody Employee employee){
+        System.out.println(id);
+       Employee updatedEmp =  employeeService.updateEmployee(id,employee);
+        System.out.println(updatedEmp);
+
+        return updatedEmp;
+    }
 }
