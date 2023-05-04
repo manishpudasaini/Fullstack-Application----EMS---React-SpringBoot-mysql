@@ -5,11 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Header({title}) {
   return (
     <>
-    {/* <div id='header'>
-
-
-        <h1>Employee Management System - {title}</h1>
-    </div> */}
+  
     <div className='navbar'>
     <ul class="nav-links">
 

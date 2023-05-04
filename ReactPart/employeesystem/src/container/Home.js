@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, {   useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import DeleteButton from './DeleteButton';
 import Update from './Update';
 import "./Home.css"
 
+
 export default function Home() {
+
+  
+
+ 
+
     const[employee, setEmployee] = useState([])
 
-    
-
-
+  
     useEffect(()=>{
         fetch('http://localhost:8080/employee/get').then(function(response){
         response.json().then(function(data) {
@@ -67,8 +71,10 @@ export default function Home() {
                             <td>{gender}</td>
                             <td>{skill}</td>
                             <td><DeleteButton id={id}/> 
-                                 <Update  uid={id} uname={name} uaddress={address} 
-                                          uphone={phone} ugender={gender} uskill={skill}/>
+
+                                 <Update  uid={id} uname={name} uaddress={address}
+                                          uphone={phone} ugender={gender} uskill={skill} />
+
                             </td>
                         </tr>)
                     
@@ -84,3 +90,5 @@ export default function Home() {
     
   )
 }
+
+

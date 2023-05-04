@@ -5,6 +5,7 @@ import com.FullstackApp.SMS.service.EmployeeService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Scanner;
 
 @RestController
 @RequestMapping("/employee")
@@ -39,6 +40,7 @@ public class EmployeeController {
     @PutMapping ("/update/{id}")
     public Employee updateEmployee(@PathVariable int id,@RequestBody Employee employee){
         System.out.println(id);
+        System.out.println(employee);
        Employee updatedEmp =  employeeService.updateEmployee(id,employee);
         System.out.println(updatedEmp);
 
